@@ -1,0 +1,12 @@
+---
+
+	- name: Docker image by Dockerfile
+ 	  hosts: localhost
+	  become: yes
+	  tasks:
+	    - name: Build Image Docker
+	      docker_image:
+	        name: image:latest
+                path: https://github.com/AbhijitSingh4En/Project123/blob/master/Dockerfile
+	        state: present
+
